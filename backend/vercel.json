@@ -5,15 +5,5 @@
             "src": "./server.js",
             "use": "@vercel/node"
         }
-    ],
-    "routes": [
-        {
-            "src": "/api/animeRoutes/(.*)",
-            "dest": "https://anime-sphere-backend.vercel.app/api/animeRoutes"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/$1"
-        }
     ]
 }
