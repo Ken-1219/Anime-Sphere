@@ -8,8 +8,8 @@
     ],
     "routes": [
         {
-            "src": "/api/animeRoutes/(.*)",
-            "dest": "https://anime-sphere-backend.vercel.app/api/animeRoutes/$1"
+            "src": "(.*)",
+            "dest": "$1"
         }
     ]
 }
