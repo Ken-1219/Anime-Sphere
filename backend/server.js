@@ -16,6 +16,8 @@ app.use((req, res, next) => {
     next();
 })
 
+//allow all origins
+app.use(cors());
 //to allow cross-origin requests
 app.use(cors({ origin: 'https://anime-sphere-frontend.vercel.app/' }));
 
