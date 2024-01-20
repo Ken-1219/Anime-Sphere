@@ -1,0 +1,54 @@
+div.animeCard {
+    margin: 5px 0;
+    padding: 0 5px;
+    width: 16rem;
+    height: 23.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #6D6D6D;
+    line-height: 1.3rem;
+    background-color: #1D1D1D;
+    cursor: default;
+
+}
+
+.animeCard:hover {
+    /* box-shadow: 2px 3px 4px #272829; */
+    color: #aaa;
+    transform: translateY(-2px);
+
+}
+
+
+img.animeCover {
+    width: 14rem;
+    height: 17rem;
+    margin: 1rem;
+    transition: transform 0.3s ease;
+}
+
+img.animeCover:hover {
+    transform: scale(1.1);
+}
+
+div.anime-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+div.anime-body a {
+    text-decoration: none;
+    color: #6D6D6D;
+}
+
+div.anime-body a:hover {
+    color: #aaa;
+}

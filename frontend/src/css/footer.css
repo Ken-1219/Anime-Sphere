@@ -1,0 +1,16 @@
+div.footer{
+    background-color: #161616;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.footerLine{
+    width: 70%;
+    border: 0.5px dashed #fefdfd;
+    margin-bottom: 1rem;
+}

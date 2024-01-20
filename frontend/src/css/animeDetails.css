@@ -1,0 +1,115 @@
+.detailsWrapper {
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    color: #aaa;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1.title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+
+.animeDetail {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 65rem;
+}
+
+div.cover-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 5rem;
+    min-width: 5rem;
+    margin-right: 4rem;
+}
+
+img.cover {
+    width: 15rem;
+    border-radius: 10px;
+    /* border: 1px solid #6D6D6D; */
+}
+
+div.basic-info {
+    line-height: 2rem;
+}
+
+span {
+    color: #6D6D6D;
+    font-weight: 700;
+}
+
+
+span.reviews {
+    font-size: 0.8rem;
+}
+
+.synopsisWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details {
+    margin: 1rem 2rem;
+    width: 65rem;
+}
+
+.synopsisHeading {
+    margin: 1rem auto;
+    color: #fff;
+}
+
+button.addBtn {
+    width: 15rem;
+    padding: 0.2rem;
+    border-radius: 5px;
+    color: #161616;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /* background-color: #1D1D1D; */
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+button.addBtn:hover {
+    /* color: rgb(255,0,0); */
+    font-weight: 900;
+}
+
+div.trailer {
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+iframe {
+    width: 28rem;
+    min-height: 15rem;
+    border: none;
+    /* border-radius: 10px; */
+}
+
+h3.trailer_heading {
+    margin-bottom: 1rem;
+}

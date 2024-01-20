@@ -1,0 +1,63 @@
+
+div.home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px 5px;
+    justify-content: space-between;
+    background-color: #161616;
+    padding: 10px 100px;
+    color: #6D6D6D;
+}
+
+/* heading div and heading */
+div.headingDiv{
+    display: flex;
+    align-items: center;
+    padding: 10px 100px;
+    margin-top: 3rem;
+}
+
+div.headingDiv h1.heading{
+    color: #6D6D6D;
+    background-color: #161616;
+    text-align: center;
+}
+
+div.pageBtn{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+div.pageBtn ion-icon{
+    margin: 5px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* to over-write the previous css when the buttons are supposed to be disabled */
+div.pageBtn ion-icon#disabled{
+    color: gray;
+    cursor: not-allowed;
+}
+
+p.error,
+p.null_data{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   color: #6D6D6D;
+}
+p.error{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+p.null_data{
+    margin-top: 4rem;
+    font-size: 1.7rem;
+}

@@ -1,0 +1,97 @@
+.loginContainer {
+    min-width: 35%;
+    min-height: 50%;
+    margin: auto;
+    margin-bottom: 5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    color: #aaa;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login h1 {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 19rem;
+}
+
+.login-form label {
+    margin: 0.5rem 0;
+    color: #aaa;
+}
+
+.login-form input {
+    color: black;
+    font-weight: 700;
+    padding: 0.5rem;
+    height: 3rem;
+    background-color: #fff;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #161616;
+    border-radius: 10px;
+    outline: none;
+}
+
+.login-form button {
+    padding: 0.5rem;
+    background-color: #8a61fb;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    outline: none;
+    background-color: #6e3cd3;
+}
+
+
+p.redirect-to-signup {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+p a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+
+#emailError,
+#passwordError{
+    color: red;
+    font-weight: 500;
+    border: 2px solid red;
+    background-color: #fff;
+}
+#emailError::placeholder,
+#passwordError::placeholder{
+    color: red;
+}

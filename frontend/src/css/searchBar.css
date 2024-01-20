@@ -1,0 +1,61 @@
+div.contains_searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.background{
+    height: 14rem;
+    width: 86.5%;
+    background: url('../assets/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+div.searchBar{
+    width: 50%;;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -18%;
+}
+
+div.searchBar input{
+    height: 4rem;
+    width: 35rem;
+    padding: 20px;
+    border-radius: 5px;
+    border:none;
+    font-size: 1.5rem;
+    background: #fff;
+}
+div.searchBar input:focus{
+    outline: none;
+    border: none;
+}
+
+div.search-icon{
+    height: 4rem;
+    width: 5rem;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+}
+
+ion-icon#searchIcon{
+    font-size: 2rem;
+    color: #aaa;
+    border: none;
+    /* right: 7%; */
+    cursor: pointer ;
+}

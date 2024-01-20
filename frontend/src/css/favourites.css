@@ -1,0 +1,48 @@
+.FavouritesWrapper {
+    width: 100%;
+}
+
+.myFav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px 5px;
+    justify-content: space-between;
+    background-color: #161616;
+    padding: 10px 100px;
+    color: #6D6D6D;
+}
+
+.favHeading {
+    color: #fff;
+    background-color: #161616;
+    text-align: center;
+}
+
+.cardWrapper{
+    position: relative;
+}
+
+#delete-icon {
+    display: none;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    font-size: 1.7rem;
+    color: rgb(255,0,0);
+    font-weight: 100;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.cardWrapper:hover #delete-icon {
+    display: block;
+}
+
+p.no-fav{
+    margin: 2rem auto;
+    color: #aaa;
+    text-align: center;
+    font-size: 1.5rem;
+}

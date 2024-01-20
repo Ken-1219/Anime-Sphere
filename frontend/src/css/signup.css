@@ -1,0 +1,104 @@
+.signupContainer {
+    min-width: 35%;
+    min-height: 50%;
+    margin: auto;
+    margin-bottom: 5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    color: #aaa;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.signup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signup h1 {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 19rem;
+}
+
+.signup-form label {
+    margin: 0.5rem 0;
+    color: #aaa;
+}
+
+.signup-form input {
+    color: black;
+    font-weight: 700;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    height: 3rem;
+    border: 1px solid #161616;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+.signup-form button {
+    padding: 0.5rem;
+    background-color: #8a61fb;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    outline: none;
+    background-color: #6e3cd3;
+}
+
+
+p.redirect-to-login {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+p a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+p.error-message {
+    color: rgb(247, 97, 97);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+#emailError,
+#passwordError {
+    color: red;
+    font-weight: 500;
+    border: 2px solid red;
+    background-color: #fff;
+}
+
+#emailError::placeholder,
+#passwordError::placeholder {
+    color: red;
+}
