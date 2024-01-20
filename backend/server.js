@@ -23,7 +23,7 @@ app.use(cors({ origin: 'https://anime-sphere-frontend.vercel.app/' }));
 
 
 //Routes
-app.use('/api/animeRoutes', animeRoutes);
+app.use('https://anime-sphere-frontend.vercel.app/api/animeRoutes', animeRoutes);
 
 
 //connect to mongoDB via Mongoose
