@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 })
 
 //to allow cross-origin requests
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://anime-sphere-frontend.vercel.app/' }));
 
 
 //Routes
