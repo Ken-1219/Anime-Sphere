@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSearchedAnimeData } from '../store/animeSlice';
 import { actions } from '../store/currentPageSlice';
+import { animeNameActions } from '../store/animeSlice';
 import '../css/searchBar.css';
 
 function SearchBar() {
@@ -9,21 +10,22 @@ function SearchBar() {
     const [animeName, setAnimeName] = useState('');
     const currSearchPage = useSelector((state) => state.page.searchPage);
 
-    const handleSearch = () => {
 
-        const isValidInput = /^[a-zA-Z0-9\s]+$/.test(animeName.trim());
+    const handleSearch = () => {
+        const isValidInput = /^[a-zA-Z0-9\s]+$/.test(animeName?.trim());
 
         if (isValidInput) {
-            console.log("Anime Name: ", animeName);
-            dispatch(actions.searchResetPage());
+            
             const searchQuery = {
                 animeName: animeName,
                 pageNumber: currSearchPage
             }
-            console.log("Search Query from search bar: ", searchQuery);
+            dispatch(actions.searchResetPage());
+            dispatch(animeNameActions.animeNameChange(animeName));
+
             dispatch(fetchSearchedAnimeData(searchQuery));
         }
-        // setAnimeName('');
+        setAnimeName('');
     }
 
     const handleKeyDown = (e) => {

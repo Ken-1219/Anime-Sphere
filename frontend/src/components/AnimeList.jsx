@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSearchedAnimeData } from "../store/animeSlice";
 import { actions } from "../store/currentPageSlice";
+import { v4 as uuidv4 } from 'uuid'; 
 import Loader from "./Loader";
 import '../css/animeList.css';
 
@@ -11,24 +12,24 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
     const dispatch = useDispatch();
     const currPage = useSelector((state) => state.page.currentPage);
     const currSearchPage = useSelector((state) => state.page.searchPage);
-    const isValidInput = /^[a-zA-Z0-9\s]+$/.test(animeName.trim());
+    const isValidInput = /^[a-zA-Z0-9\s]+$/.test(animeName?.trim());
+
+
+    const fetchData = () => {
+        if (isValidInput) {
+            const searchQuery = {
+                animeName: animeName,
+                pageNumber: currSearchPage
+            }
+            dispatch(fetchSearchedAnimeData(searchQuery));
+        }
+    }
 
 
     useEffect(() => {
-        const fetchData = () => {
-            if (isValidInput) {
-                const searchQuery = {
-                    animeName: animeName,
-                    pageNumber: currSearchPage
-                }
-
-                dispatch(fetchSearchedAnimeData(searchQuery));
-            }
-        };
         fetchData();
-    }, [animeName, currSearchPage, dispatch, isValidInput]);
-
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currSearchPage])
 
 
     const handlePreviousPage = () => {
@@ -43,7 +44,6 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
             return;
         }
         dispatch(actions.increment());
-        return;
     };
 
     const handleSearchPreviousPage = () => {
@@ -51,6 +51,7 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
             return;
         }
         dispatch(actions.searchDecrement());
+
 
     }
     const handleSearchNextPage = () => {
@@ -62,7 +63,7 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
 
     const renderAnimeCard = (anime) => (
         <AnimeCard
-            key={anime.mal_id}
+            key={uuidv4()}
             image={anime.images.jpg.large_image_url}
             title={anime.title_english || anime.title}
             score={anime.score}

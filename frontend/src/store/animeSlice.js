@@ -14,7 +14,6 @@ export const fetchAnimeData = createAsyncThunk('anime/fetchAnimeData', async (pa
 export const fetchSearchedAnimeData = createAsyncThunk('animeSearch/fetchSearchedAnimeData', async (params) => {
     try {
         const { animeName, pageNumber } = params;
-        
         const response = (await axios.get(`https://api.jikan.moe/v4/anime?q=${animeName}&page=${pageNumber}&sfw`)).data;
         return { response, animeName };
     }
@@ -34,6 +33,9 @@ const newAnimeSlice = createSlice({
         animeName: ''
     },
     reducers: {
+        animeNameChange(state,action) { 
+            state.animeName = action.payload
+        },
         resetAnimeName(state, action) { state.animeName = '' }
     },
     extraReducers: (builder) => {
