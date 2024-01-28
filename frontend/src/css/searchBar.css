@@ -5,7 +5,7 @@ div.contains_searchbar{
 }
 
 div.background{
-    height: 14rem;
+    height: 15rem;
     width: 86.5%;
     background: url('../assets/banner.jpg');
     background-size: cover;
@@ -17,7 +17,7 @@ div.background{
     position: relative;
 }
 div.searchBar{
-    width: 50%;;
+    width: 50%;
     min-height: 5rem;
     display: flex;
     align-items: center;
@@ -56,6 +56,5 @@ ion-icon#searchIcon{
     font-size: 2rem;
     color: #aaa;
     border: none;
-    /* right: 7%; */
     cursor: pointer ;
 }
