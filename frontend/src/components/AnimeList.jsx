@@ -79,8 +79,8 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
                 <>
                     <div className='headingDiv'>
                         <h1 className="heading">{title}</h1>
-
                     </div>
+                    
                     <div className="home">
                         {!loading && data?.map(renderAnimeCard)}
                     </div>

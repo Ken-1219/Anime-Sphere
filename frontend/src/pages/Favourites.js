@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import AnimeCard from "../components/AnimeCard";
 import Loader from "../components/Loader";
 import toast, { Toaster } from 'react-hot-toast';
+import {v4 as uuidv4} from 'uuid';
 import '../css/favourites.css'
 
 function Favourites() {
@@ -86,7 +87,7 @@ function Favourites() {
                 onClick={() => handleClick(anime?.mal_id)}
             />
             <AnimeCard
-                key={anime?.mal_id}
+                key={uuidv4()}
                 image={anime?.image}
                 title={anime?.title}
                 score={anime?.score}
