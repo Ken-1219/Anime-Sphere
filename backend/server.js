@@ -26,12 +26,13 @@ app.use(process.env.API, animeRoutes);
 
 
 //connect to mongoDB via Mongoose
+const PORT = process.env.PORT || 4000
 mongoose.connect(process.env.DB_URI)
     .then(() => {
         console.log('Connected to MongoDB');
         //Listening to requests
         app.listen(process.env.PORT, () => {
-            console.log('Server is running on Port: ', process.env.PORT);
+            console.log('Server is running on Port: ', PORT);
         });
     })
     .catch((err) => console.log("Error connecting to Database: ", err.message));
