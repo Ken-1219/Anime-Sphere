@@ -5,7 +5,6 @@ const Anime = require('../models/animeModel');
 
 //obtain the list of my-anime
 const getAnime = async (req, res) => {
-    console.log("Trying to fetch the list of all the user animes")
     const { uid } = req.query;
 
     try {
