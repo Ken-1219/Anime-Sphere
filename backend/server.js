@@ -29,7 +29,7 @@ app.use(process.env.API, animeRoutes);
 const PORT = process.env.PORT || 4000
 mongoose.connect(process.env.DB_URI)
     .then(() => {
-        console.log('Connected to MongoDB');
+        console.log('Connected to MongoDB kgjkfkjhf');
         //Listening to requests
         app.listen(PORT, () => {
             console.log('Server is running on Port: ', PORT);
