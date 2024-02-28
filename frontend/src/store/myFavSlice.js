@@ -4,10 +4,12 @@ import axios from 'axios';
 
 export const fetchFromDB = createAsyncThunk('anime/fetchFromDB', async (uid) => {
     try {
-        const response = await axios.get('http://localhost:4000/api/animeRoutes/getAnime', {
+        const apiUrl = process.env.REACT_APP_BACKEND_API + '/getAnime';
+        console.log(apiUrl);
+        const response = await axios.get(apiUrl, {
             params: {
-                uid
-            }
+                    uid
+                }
         });
         const json = await response.data;
 

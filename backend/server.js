@@ -21,7 +21,8 @@ app.use(cors());
 
 
 //Routes
-app.use('/api/animeRoutes', animeRoutes);
+// app.use('/api/animeRoutes', animeRoutes);
+app.use(process.env.API, animeRoutes);
 
 
 //connect to mongoDB via Mongoose

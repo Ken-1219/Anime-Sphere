@@ -50,7 +50,8 @@ function Favourites() {
             //if the user exists -->  delete the data for that particular user 
             onAuthStateChanged(auth, async (user) => {
                 try {
-                    const response = await axios.delete(`http://localhost:4000/api/animeRoutes/myAnime/${mal_id}`, {
+                    const apiUrl = process.env.REACT_APP_BACKEND_API + `/myAnime/${mal_id}`
+                    const response = await axios.delete(apiUrl, {
                         params: {
                             uid: user.uid
                         }

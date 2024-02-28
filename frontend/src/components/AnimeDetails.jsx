@@ -47,7 +47,9 @@ const AnimeDetails = () => {
       if (user) {
         setPageLoading(false);
         try {
-          const exist = await axios.get(`http://localhost:4000/api/animeRoutes/findAnime`, {
+          const apiUrl = process.env.REACT_APP_BACKEND_API + '/findAnime';
+          // console.log(apiUrl);
+          const exist = await axios.get(apiUrl, {
             params: {
               id: data.mal_id,
               uid: user.uid
@@ -72,9 +74,9 @@ const AnimeDetails = () => {
             uid: user.uid
           };
 
-          const response = await axios.post(
-            `http://localhost:4000/api/animeRoutes/anime/${anime.mal_id}`,
-            anime,
+          const addAnimeURL_API = process.env.REACT_APP_BACKEND_API + `/anime/${anime.mal_id}`
+
+          const response = await axios.post(addAnimeURL_API, anime,
             {
               headers: {
                 'Content-Type': 'application/json'

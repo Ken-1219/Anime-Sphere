@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-.cardWrapper{
+.cardWrapper {
     position: relative;
 }
 
@@ -29,7 +29,7 @@
     top: 1%;
     right: 2%;
     font-size: 1.7rem;
-    color: rgb(255,0,0);
+    color: rgb(255, 0, 0);
     font-weight: 100;
     cursor: pointer;
     z-index: 1;
@@ -40,7 +40,7 @@
     display: block;
 }
 
-p.no-fav{
+p.no-fav {
     margin: 2rem auto;
     color: #aaa;
     text-align: center;
