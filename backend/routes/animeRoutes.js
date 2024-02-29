@@ -3,6 +3,10 @@ const { addAnime, getAnime, deleteAnime, findAnime } = require('../controllers/a
 
 const router = express.Router();
 
+router.get('', ()=>{
+    res.status(200).json("API is running");
+})
+
 //to get a list of user's added animes
 router.get('/getAnime', getAnime);
 
