@@ -3,7 +3,7 @@ const { addAnime, getAnime, deleteAnime, findAnime } = require('../controllers/a
 
 const router = express.Router();
 
-router.get('/', ()=>{
+router.get('/', (req,res)=>{
     res.status(200).json("API is running");
 })
 
