@@ -25,12 +25,7 @@ const Home = () => {
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setPageLoading(false);
-            }
-            else {
-                setPageLoading(false);
-            }
+            setPageLoading(false);
         })
         dispatch(fetchAnimeData(currPage));
     }, [currPage, dispatch]);

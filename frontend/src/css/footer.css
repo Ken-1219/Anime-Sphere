@@ -1,7 +1,7 @@
 div.footer{
     background-color: #161616;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ div.footer{
 }
 
 div.footerLine{
-    width: 70%;
+    width: 50%;
     border: 0.5px dashed #fefdfd;
     margin-bottom: 1rem;
 }

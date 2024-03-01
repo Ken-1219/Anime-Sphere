@@ -12,6 +12,48 @@ function Login() {
     const [emailError, setEmailError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
 
+    const checkError = (err) => {
+        if (!email) {
+            setEmailError(true);
+            setError('Email is required.')
+            return;
+        }
+        else {
+            setEmailError(false);
+        }
+
+
+        if (!password) {
+            setPasswordError(true);
+            setError('Password is required.')
+            return;
+        }
+        else {
+            setPasswordError(false);
+        }
+
+
+
+        const errorCode = err.code;
+        let errorMessage = err.message;
+        console.log(err.message);
+
+        switch (errorCode) {
+            case 'auth/invalid-email':
+                setEmailError(true);
+                errorMessage = 'Invalid email address.';
+                break;
+            case 'auth/invalid-credential':
+                setEmailError(true);
+                setPasswordError(true);
+                errorMessage = 'Incorrect Email or Password. Try Again!';
+                break;
+            default:
+                errorMessage = 'An error occurred. Please try again.';
+        }
+        setError(errorMessage);
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -22,45 +64,7 @@ function Login() {
             }
         }
         catch (err) {
-            if (!email) {
-                setEmailError(true);
-                setError('Email is required.')
-                return;
-            } 
-            else {
-                setEmailError(false);
-            }
-
-
-            if (!password) {
-                setPasswordError(true);
-                setError('Password is required.')
-                return;
-            } 
-            else {
-                setPasswordError(false);
-            }
-
-
-
-            const errorCode = err.code;
-            let errorMessage = err.message;
-            console.log(err.message);
-
-            switch (errorCode) {
-                case 'auth/invalid-email':
-                    setEmailError(true);
-                    errorMessage = 'Invalid email address.';
-                    break;
-                case 'auth/invalid-credential':
-                    setEmailError(true);
-                    setPasswordError(true);
-                    errorMessage = 'Incorrect Email or Password. Try Again!';
-                    break;
-                default:
-                    errorMessage = 'An error occurred. Please try again.';
-            }
-            setError(errorMessage);
+            checkError(err);
         }
     }
 
