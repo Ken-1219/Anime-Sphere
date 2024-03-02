@@ -31,12 +31,20 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currSearchPage])
 
+    //to scroll to the top when page change occurs
+    const scrollToTop = ()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
 
     const handlePreviousPage = () => {
         if (currPage === 1) {
             return;
         }
         dispatch(actions.decrement());
+        scrollToTop();
     };
 
     const handleNextPage = () => {
@@ -44,6 +52,7 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
             return;
         }
         dispatch(actions.increment());
+        scrollToTop();
     };
 
     const handleSearchPreviousPage = () => {
@@ -51,7 +60,7 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
             return;
         }
         dispatch(actions.searchDecrement());
-
+        scrollToTop();
 
     }
     const handleSearchNextPage = () => {
@@ -59,6 +68,7 @@ function AnimeList({ title, data, loading, pagination, error, animeName }) {
             return;
         }
         dispatch(actions.searchIncrement());
+        scrollToTop();
     }
 
     const renderAnimeCard = (anime) => (

@@ -8,8 +8,9 @@ import { auth } from '../config/firebase';
 import { useNavigate } from 'react-router-dom';
 import AnimeCard from "../components/AnimeCard";
 import Loader from "../components/Loader";
+import Footer from '../components/Footer';
 import toast, { Toaster } from 'react-hot-toast';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import '../css/favourites.css'
 
 function Favourites() {
@@ -58,14 +59,12 @@ function Favourites() {
                     })
                     if (response.status === 200) {
                         dispatch(favActions.removeAnime(mal_id));
-                        toast("Anime deleted successfully", {
+                        toast("Anime removed successfully", {
                             icon: '❌'
-
                         });
                     }
                 }
-                catch(err){
-                    console.log("Error occured");
+                catch (err) {
                     toast('Something went wrong...', {
                         icon: '🚫'
                     });
@@ -99,7 +98,7 @@ function Favourites() {
 
 
     return (
-        <>
+        <div className='fav-container'>
             <div className="FavouritesWrapper">
                 {loading && <Loader />}
                 {error && <p className="error">Something went wrong...</p>}
@@ -112,6 +111,7 @@ function Favourites() {
                             </div>
                         )}
                         {data.length < 1 && (<p className='no-fav'>No favourites added.</p>)}
+                        <Footer />
                     </div>
                 )}
             </div>
@@ -125,7 +125,7 @@ function Favourites() {
                     },
                 }}
             />
-        </>
+        </div>
     )
 }
 

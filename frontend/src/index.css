@@ -14,5 +14,20 @@ body {
 
 div.app {
     width: 100%;
-    min-height: 100%;
+}
+
+
+/* Scrollbar CSS */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #6D6D6D;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
 }

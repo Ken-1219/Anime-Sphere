@@ -1,5 +1,7 @@
 .FavouritesWrapper {
     width: 100%;
+    position: relative;
+    min-height: 65vh;
 }
 
 .myFav {

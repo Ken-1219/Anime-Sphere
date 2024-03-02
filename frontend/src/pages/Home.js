@@ -1,11 +1,13 @@
 import AnimeList from "../components/AnimeList";
 import SearchBar from "../components/SearchBar";
 import Loader from '../components/Loader';
+import Footer from '../components/Footer';
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAnimeData } from "../store/animeSlice";
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../config/firebase';
+import '../css/home.css';
 
 
 const Home = () => {
@@ -32,22 +34,25 @@ const Home = () => {
 
 
     return (
-        <>
-            {pageLoading && <Loader />}
-            {!pageLoading && (
-                <div>
-                    <SearchBar />
-                    <AnimeList
-                        title={title}
-                        data={data}
-                        loading={loading}
-                        pagination={pagination}
-                        error={error}
-                        animeName={animeName}
-                    />
-                </div>
-            )}
-        </>
+        <div className="main-container">
+            <div className="content-wrapper">
+                {pageLoading && <Loader />}
+                {!pageLoading && (
+                    <div className="home-wrapper">
+                        <SearchBar />
+                        <AnimeList
+                            title={title}
+                            data={data}
+                            loading={loading}
+                            pagination={pagination}
+                            error={error}
+                            animeName={animeName}
+                        />
+                        <Footer />
+                    </div>
+                )}
+            </div>
+        </div>
     )
 }
 

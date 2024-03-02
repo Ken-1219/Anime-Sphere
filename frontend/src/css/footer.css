@@ -1,4 +1,4 @@
-div.footer{
+div.footer {
     background-color: #161616;
     color: #fff;
     font-size: 1.5rem;
@@ -7,10 +7,14 @@ div.footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: auto;
+    position: absolute;
+    bottom: -8rem;
+    width: 100%;
 }
 
-div.footerLine{
-    width: 50%;
-    border: 0.5px dashed #fefdfd;
+div.footerLine {
+    width: 90%;
+    border: 0.5px solid #fefdfd;
     margin-bottom: 1rem;
 }

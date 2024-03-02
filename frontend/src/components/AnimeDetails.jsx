@@ -7,6 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../config/firebase';
 import Loader from './Loader';
+import Footer from '../components/Footer';
 import axios from "axios";
 import '../css/animeDetails.css';
 
@@ -108,7 +109,7 @@ const AnimeDetails = () => {
 
 
   return (
-    <>
+    <div className="animeDetails-container">
       {loading && <Loader />}
       {error && <p className='error'>Something went wrong...</p>}
       {!loading && !pageLoading && !error && (
@@ -144,28 +145,28 @@ const AnimeDetails = () => {
 
             </div>
 
-            <div className="trailer">
-              {data?.trailer?.embed_url && (
-                <>
-                  <h3 className="trailer_heading">Watch Trailer</h3>
-                  <iframe src={data?.trailer?.embed_url}
-                    allow='encrypted-media'
-                    allowFullScreen={true}
-                    title='video'
-                  />
-                </>
-              )}
-            </div>
+            
           </div>
 
           <div className="synopsisWrapper">
             <div className="details">
               <h2 className="synopsisHeading">Synopsis </h2>
-              <p className="synopsis">{data?.synopsis || 'No data availble!!!'}</p>
+              <p className="synopsis">{data?.synopsis || 'No data availble'}</p>
             </div>
           </div>
-
-        </div >
+          <div className="trailer">
+            {data?.trailer?.embed_url && (
+              <>
+                <h3 className="trailer_heading">Watch Trailer</h3>
+                <iframe src={data?.trailer?.embed_url}
+                  allow='encrypted-media'
+                  allowFullScreen={true}
+                  title='video'
+                />
+              </>
+            )}
+          </div>
+        </div>
       )}
       <Toaster
         toastOptions={{
@@ -175,7 +176,8 @@ const AnimeDetails = () => {
             color: '#fff',
           }
         }} />
-    </>
+      <Footer />
+    </div>
   )
 }
 
