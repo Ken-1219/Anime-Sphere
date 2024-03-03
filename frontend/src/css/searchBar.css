@@ -1,10 +1,10 @@
-div.contains_searchbar{
+div.contains_searchbar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-div.background{
+div.background {
     height: 15rem;
     width: 86.5%;
     background: url('../assets/banner.jpg');
@@ -16,7 +16,8 @@ div.background{
     justify-content: center;
     position: relative;
 }
-div.searchBar{
+
+div.searchBar {
     width: 50%;
     min-height: 5rem;
     display: flex;
@@ -26,21 +27,22 @@ div.searchBar{
     bottom: -18%;
 }
 
-div.searchBar input{
+div.searchBar input {
     height: 4rem;
     width: 35rem;
     padding: 20px;
     border-radius: 5px;
-    border:none;
+    border: none;
     font-size: 1.5rem;
     background: #fff;
 }
-div.searchBar input:focus{
+
+div.searchBar input:focus {
     outline: none;
     border: none;
 }
 
-div.search-icon{
+div.search-icon {
     height: 4rem;
     width: 5rem;
     background: #fff;
@@ -52,9 +54,71 @@ div.search-icon{
     right: 4%;
 }
 
-ion-icon#searchIcon{
+ion-icon#searchIcon {
     font-size: 2rem;
-    color: #aaa;
+    /* color: #aaa; */
+    color: rgba(0, 0, 0, 0.47);
     border: none;
-    cursor: pointer ;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media(max-width:451px) {
+    div.background {
+        height: 10rem;
+        width: 90.5%;
+    }
+
+    div.searchBar {
+        width: 2rem;
+        min-height: 3rem;
+        bottom: -10%;
+    }
+
+    div.searchBar input {
+        height: 3rem;
+        width: 17rem;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    div.search-icon {
+        height: 1.5rem;
+        width: 2rem;
+        right: -6.3rem;
+    }
+
+    ion-icon#searchIcon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    div.background {
+        height: 8rem;
+        width: 86.5%;
+    }
+
+    div.searchBar {
+        width: 2rem;
+        min-height: 1.5rem;
+        bottom: -10%;
+    }
+
+    div.searchBar input {
+        height: 2rem;
+        width: 15rem;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    div.search-icon {
+        height: 1.5rem;
+        width: 2rem;
+        right: -6.3rem;
+    }
+
+    ion-icon#searchIcon {
+        font-size: 1.8rem;
+    }
 }

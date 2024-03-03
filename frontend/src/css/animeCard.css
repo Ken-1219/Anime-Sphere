@@ -51,3 +51,85 @@ div.anime-body a {
 div.anime-body a:hover {
     color: #aaa;
 }
+
+
+/* Media Queries */
+@media(max-width:1441px) {
+    div.animeCard {
+        width: 15rem;
+        height: 25rem;
+    }
+}
+
+
+
+@media(max-width:451px) {
+    div.animeCard {
+        width: 11.5rem;
+        height: 18rem;
+        margin: 0;
+    }
+
+    img.animeCover {
+        margin: 8px;
+        width: 10rem;
+        height: 12rem;
+        border-radius: 3px;
+    }
+
+    .anime-title {
+        font-size: 1rem;
+    }
+
+    div.react-stars {
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 376px) {
+    div.animeCard {
+        width: 10.5rem;
+        height: 18rem;
+        margin: 0;
+    }
+
+    img.animeCover {
+        margin: 8px;
+        width: 10rem;
+        height: 12rem;
+        border-radius: 3px;
+    }
+
+    .anime-title {
+        font-size: 1rem;
+    }
+
+    div.react-stars {
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+    div.animeCard {
+        width: 9rem;
+        height: 14rem;
+    }
+
+    img.animeCover {
+        margin: 5px;
+        width: 8.5rem;
+        height: 9rem;
+    }
+
+    .anime-title {
+        font-size: 0.8rem;
+    }
+}

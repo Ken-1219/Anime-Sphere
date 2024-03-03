@@ -13,12 +13,14 @@ function AnimeCard(anime) {
                     <h4 className="anime-title" >{anime.title}</h4>
                 </Link>
                 {anime.score !== null ? (
-                    <ReactStars
-                        count={5}
-                        value={anime.score / 2}
-                        edit={false}
-                        isHalf={true}
-                    />
+                    <div classNames="react-stars">
+                        <ReactStars
+                            count={5}
+                            value={anime.score / 2}
+                            edit={false}
+                            isHalf={true}
+                        />
+                    </div>
                 ) : (
                     <p>N/A</p>
                 )}

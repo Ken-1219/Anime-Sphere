@@ -48,3 +48,69 @@ p.no-fav {
     text-align: center;
     font-size: 1.5rem;
 }
+
+/* Media Queries */
+/* For Smaller laptops and desktops */
+@media(max-width:1280px) {
+    .myFav {
+        padding: 10px 6.25rem;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: end;
+    }
+}
+
+@media(max-width:1024px) {
+    .myFav {
+        padding: 10px 6.25rem;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: end;
+    }
+}
+
+/* For tablets */
+@media(max-width:769px) {
+    .myFav {
+        padding: 10px 6.25rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: end;
+    }
+}
+
+/* For Mobile Devices */
+@media(max-width:450px) {
+    .FavouritesWrapper {
+        min-height: 55vh;
+    }
+
+    .myFav {
+        padding: 10px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: end;
+    }
+
+    .favHeading {
+        font-size: 1.5rem;
+    }
+
+    #delete-icon {
+        display: block;
+    }
+}
+
+@media(max-width:376px) {
+    .myFav {
+        padding: 10px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 5px;
+        justify-items: end;
+    }
+}
+
+@media(max-width: 321px) {
+    .myFav {
+        padding: 10px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: end;
+    }
+
+}

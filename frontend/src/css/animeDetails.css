@@ -115,3 +115,111 @@ iframe {
 h3.trailer_heading {
     margin-bottom: 1rem;
 }
+
+/* Media Queries */
+/* For Smaller laptops and desktops */
+@media(max-width:1280px) {
+    .synopsisHeading {
+        text-align: center;
+    }
+
+    .details {
+        margin: 0;
+        width: 60rem;
+    }
+}
+
+
+@media(max-width:1024px) {
+    .details {
+        margin: 0;
+        width: 48rem;
+    }
+}
+
+/* For tablets */
+@media(max-width:769px) {
+    .animeDetail {
+        width: 35rem;
+    }
+
+    div.cover-wrapper {
+        margin: 1rem;
+    }
+
+
+    .details {
+        margin: 0;
+        width: 30rem;
+    }
+
+    div.trailer {
+        width: 30rem;
+        margin: 0;
+    }
+
+    iframe {
+        min-height: 20rem;
+        width: 30rem;
+    }
+}
+
+/* For Mobile Devices */
+@media(max-width: 451px) {
+    .detailsWrapper {
+        min-width: 97%;
+        justify-content: center;
+        background-color: #161616;
+        backdrop-filter: blur(0px);
+    }
+
+    .animeDetail {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    h1.title {
+        font-size: 1.5rem;
+        margin: 0 auto;
+        font-weight: 400;
+    }
+
+    div.cover-wrapper {
+        margin: 1rem 0;
+    }
+
+
+    .synopsisHeading {
+        text-align: center;
+    }
+
+    .details {
+        margin: 0;
+        width: 17rem;
+    }
+
+    div.trailer {
+        width: 21rem;
+        margin: 0;
+    }
+
+    iframe {
+        min-height: 14.5rem;
+        width: 20.5rem;
+    }
+}
+
+@media(max-width:320px) {
+    .detailsWrapper {
+        min-width: 95%;
+    }
+
+    .details {
+        width: 15rem;
+    }
+
+    iframe {
+        min-height: 12.5rem;
+        max-width: 17.188rem;
+    }
+}

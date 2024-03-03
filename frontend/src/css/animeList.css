@@ -10,26 +10,26 @@ div.home {
 }
 
 /* heading div and heading */
-div.headingDiv{
+div.headingDiv {
     display: flex;
     align-items: center;
     padding: 10px 100px;
     margin-top: 3rem;
 }
 
-div.headingDiv h1.heading{
+div.headingDiv h1.heading {
     color: #6D6D6D;
     background-color: #161616;
     text-align: center;
 }
 
-div.pageBtn{
-    display: flex;    
+div.pageBtn {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-div.pageBtn ion-icon{
+div.pageBtn ion-icon {
     margin: 5px;
     color: white;
     font-size: 1.5rem;
@@ -37,25 +37,109 @@ div.pageBtn ion-icon{
 }
 
 /* to over-write the previous css when the buttons are supposed to be disabled */
-div.pageBtn ion-icon#disabled{
+div.pageBtn ion-icon#disabled {
     color: gray;
     cursor: not-allowed;
 }
 
 p.error,
-p.null_data{
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%);
-   color: #6D6D6D;
+p.null_data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6D6D6D;
 }
-p.error{
+
+p.error {
     margin-top: 2rem;
     font-size: 1.5rem;
 }
 
-p.null_data{
+p.null_data {
     margin-top: 4rem;
     font-size: 1.7rem;
+}
+
+/* Media Queries */
+/* For Smaller laptops and desktops */
+@media(max-width:1280px) {
+    div.home {
+        padding: 10px 6.25rem;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: end;
+    }
+}
+
+@media(max-width:1024px) {
+    div.home {
+        padding: 10px 6.25rem;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: end;
+    }
+}
+
+/* For tablets */
+@media(max-width:769px) {
+    div.home {
+        padding: 10px 6.25rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: end;
+    }
+}
+
+/* For Mobile Devices */
+@media(max-width:451px) {
+    div.home {
+        padding: 10px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: end;
+    }
+
+    div.headingDiv {
+        padding: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1.heading {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width: 376px) {
+    div.home {
+        padding: 10px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 5px;
+        justify-items: end;
+    }
+
+    div.headingDiv {
+        padding: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1.heading {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    div.home {
+        padding: 10px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: end;
+    }
+
+    div.headingDiv {
+        padding: 10px 80px;
+    }
+
+    h1.heading {
+        font-size: 1.2rem;
+    }
 }

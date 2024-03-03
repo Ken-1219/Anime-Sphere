@@ -46,11 +46,10 @@
     font-weight: 700;
     background-color: #fff;
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 1rem;
     height: 3rem;
     border: 1px solid #161616;
     border-radius: 10px;
-    padding: 10px;
     outline: none;
 }
 
@@ -101,4 +100,76 @@ p.error-message {
 #emailError::placeholder,
 #passwordError::placeholder {
     color: red;
+}
+
+/* Media Queries */
+/*Tablets and Smaller screen laptops */
+@media(max-width:1024px) {
+    .signupContainer {
+        width: 30rem;
+    }
+}
+
+/* Mobile Devices */
+@media(max-width:476px) {
+    .signupContainer {
+        background-color: #161616;
+        backdrop-filter: blur(0px);
+        padding: 10px;
+        border: none;
+        margin-top: 1rem;
+    }
+
+    .signup h1 {
+        color: #aaa;
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .signup-form input {
+        height: 3rem;
+        width: 19rem;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    .signup-form button {
+        font-size: 1rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p.redirect-to-login {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:376px) {
+    .signupContainer {
+        width: 20rem;
+        margin-top: 2rem;
+    }
+
+    .signup-form input {
+        width: 18rem;
+    }
+
+    .signup-form button {
+        width: 18rem;
+    }
+}
+
+
+
+@media(max-width: 321px) {
+    .signupContainer {
+        width: 15rem;
+        margin-top: 5rem;
+    }
+
+    .signup-form button {
+        margin-top: 1rem;
+    }
 }
